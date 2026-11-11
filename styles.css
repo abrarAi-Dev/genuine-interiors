@@ -229,3 +229,39 @@ a { color: var(--gold-2); }
   .rv, .h-line { opacity: 1; transform: none; }
   .st-line { opacity: 1; }
 }
+
+/* ---------- theme toggle ---------- */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: rgba(201,162,77,.1); color: var(--gold-2); cursor: pointer; flex: none; transition: background .25s ease, transform .25s ease; }
+.theme-toggle:hover { background: rgba(201,162,77,.25); transform: scale(1.06); }
+.theme-toggle svg { width: 20px; height: 20px; }
+.theme-toggle .ic-moon { display: none; }
+html[data-theme="light"] .theme-toggle .ic-sun { display: none; }
+html[data-theme="light"] .theme-toggle .ic-moon { display: block; }
+
+/* ---------- light mode: the dark blue background NEVER changes.
+   Only the cards and the form turn light, with dark text inside them. ---------- */
+html[data-theme="light"] .svc-card { background: linear-gradient(160deg, #ffffff, #f7f1e2); box-shadow: 0 14px 30px rgba(0,0,0,.3); }
+html[data-theme="light"] .svc-card h3 { color: #17203a; }
+html[data-theme="light"] .svc-card p { color: #59617a; }
+html[data-theme="light"] .svc-card .svc-icon { color: #9a7a2e; }
+html[data-theme="light"] .why-card { background: linear-gradient(160deg, #ffffff, #f7f1e2); box-shadow: 0 14px 30px rgba(0,0,0,.3); }
+html[data-theme="light"] .why-card h3 { color: #17203a; }
+html[data-theme="light"] .why-card p { color: #59617a; }
+html[data-theme="light"] .step-block { background: #ffffff; box-shadow: 0 10px 24px rgba(0,0,0,.28); }
+html[data-theme="light"] .step-block.is-on { background: #fffdf6; border-color: var(--gold); }
+html[data-theme="light"] .step-block h3 { color: #17203a; }
+html[data-theme="light"] .step-block p { color: #59617a; }
+html[data-theme="light"] .step-kicker { color: #8a6d24; }
+html[data-theme="light"] .book-form { background: linear-gradient(160deg, #ffffff, #f7f1e2); box-shadow: 0 24px 48px rgba(0,0,0,.35); }
+html[data-theme="light"] .field label { color: #8a6d24; }
+html[data-theme="light"] .field input, html[data-theme="light"] .field select, html[data-theme="light"] .field textarea { background: #ffffff; border-color: rgba(154,122,46,.45); color: #17203a; }
+html[data-theme="light"] .form-note { color: #59617a; }
+html[data-theme="light"] .book-result { background: linear-gradient(160deg, #ffffff, #f7f1e2); }
+html[data-theme="light"] .book-result h3 { color: #17203a; }
+html[data-theme="light"] .book-result p { color: #59617a; }
+html[data-theme="light"] .book-result .btn-ghost { color: #17203a; border-color: rgba(23,32,58,.45); }
+html[data-theme="light"] .book-summary { background: #fffdf6; color: #17203a; }
+html[data-theme="light"] .link-btn { color: #8a6d24; }
+html[data-theme="light"] .contact-card { background: linear-gradient(160deg, #ffffff, #f7f1e2); }
+html[data-theme="light"] .contact-card p { color: #59617a; }
+html[data-theme="light"] .contact-slogan { color: #9a7a2e; }

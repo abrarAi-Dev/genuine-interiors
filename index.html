@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
+<script>try{var t=localStorage.getItem("gi-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Genuine Interiors | Constructions - Chennai | Book a Free Consultation</title>
 <meta name="description" content="Genuine Interiors and Constructions, Chennai. Homes, interiors, modular kitchens and complete construction with clear BOQ pricing. Book a free consultation.">
@@ -21,6 +22,10 @@
       <img src="assets/logo.png" alt="Genuine Interiors logo" class="brand-logo">
       <span class="brand-text">GENUINE INTERIORS <span class="brand-sub">| CONSTRUCTIONS</span></span>
     </a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
+      <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3L19 19M19 5l-1.7 1.7M6.7 17.3L5 19"/></svg>
+      <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg>
+    </button>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
     <nav class="main-nav" id="mainNav">
       <a href="#services">Services</a>
