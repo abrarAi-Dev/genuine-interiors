@@ -281,3 +281,9 @@ html[data-theme="light"] .to-top { background: rgba(245,239,225,.92); color: #8a
 @media (max-width: 680px) {
   html[data-theme="light"] .main-nav { background: rgba(245,239,225,.97); }
 }
+
+/* ---------- booking page ---------- */
+.book-page { padding-top: 132px; }
+.back-link { text-align: left; margin-bottom: 10px; }
+.back-link a { color: var(--gold-2); text-decoration: none; font-weight: 600; font-size: 14.5px; }
+.back-link a:hover { text-decoration: underline; }
