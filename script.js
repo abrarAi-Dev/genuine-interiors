@@ -165,7 +165,7 @@
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({ name: name, phone: phone, email: email, service: service, area: area, date: dateVal, time: time, message: msg })
+        body: JSON.stringify({ name: name, phone: phone, email: email, service: service, area: area, date: dateVal, time: time || "Any time", message: msg })
       }).catch(function () {});
     } catch (err) {}
 
