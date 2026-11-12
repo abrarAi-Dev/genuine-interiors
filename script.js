@@ -157,6 +157,18 @@
     if (!service) return showError("Please choose the service you need.");
     if (!area) return showError("Please tell us your area in Chennai.");
 
+    // Save the booking in the background: one row in the Google Sheet + an
+    // email to the company. Fire-and-forget: the WhatsApp/email buttons below
+    // still work even if this save fails, so it never blocks the visitor.
+    try {
+      fetch("https://script.google.com/macros/s/AKfycbx6FnxoeuW9KsAlqycCcx7jgh0h14HOOrmiQabI2oAtKKx_nqgoFtNgssEaBj76PrS8/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ name: name, phone: phone, email: email, service: service, area: area, date: dateVal, time: time, message: msg })
+      }).catch(function () {});
+    } catch (err) {}
+
     var dateText = "Not fixed yet";
     if (dateVal) {
       var parts = dateVal.split("-");
